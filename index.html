@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NaijaBites — Modern Nigerian Kitchen</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+    <!-- HEADER -->
+    <header>
+        <div class="nav">
+
+            <div class="logo">
+                Naija<span>Bites</span>
+            </div>
+
+            <nav>
+                <a href="#menu">Menu</a>
+                <a href="#story">Our Story</a>
+                <a href="#order">Order</a>
+            </nav>
+
+            <button class="nav-cta" onclick="scrollToOrder()">
+                Order now
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    Authentic Nigerian comfort food
+                </span>
+
+                <h1>
+                    Big flavour.<br>
+                    <em>Proper</em> Naija food.
+                </h1>
+
+                <p>
+                    From smoky party jollof to rich egusi soup,
+                    NaijaBites brings familiar Nigerian favourites
+                    to your table — fresh, generous and full of flavour.
+                </p>
+
+                <div class="hero-actions">
+
+                    <button
+                        class="hero-cta"
+                        onclick="document.querySelector('#menu').scrollIntoView({behavior:'smooth'})">
+                        Explore menu
+                    </button>
+
+                    <button
+                        class="ghost"
+                        onclick="scrollToOrder()">
+                        Book a table
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="badge">
+                    ⭐ 4.9 from food lovers
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENU -->
+        <section id="menu">
+
+            <div class="section-head">
+
+                <div>
+                    <h2>Today's favourites</h2>
+
+                    <p>
+                        Classic dishes made for quick lunches,
+                        family dinners and weekend cravings.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- FILTERS -->
+            <div class="filters">
+
+                <button class="filter active" data-cat="all">
+                    All
+                </button>
+
+                <button class="filter" data-cat="rice">
+                    Rice
+                </button>
+
+                <button class="filter" data-cat="soup">
+                    Soups
+                </button>
+
+                <button class="filter" data-cat="grill">
+                    Grills
+                </button>
+
+            </div>
+
+
+            <!-- FOOD CARDS -->
+            <div class="menu" id="menuGrid"></div>
+
+        </section>
+
+
+        <!-- STORY -->
+        <section id="story">
+
+            <div class="about">
+
+                <div class="panel">
+
+                    <h3>
+                        Made with home in mind.
+                    </h3>
+
+                    <p>
+                        NaijaBites is a fictional portfolio brand
+                        created to demonstrate a responsive restaurant
+                        website. The concept combines Nigerian food
+                        culture with a clean, modern digital experience.
+                    </p>
+
+                    <p>
+                        Every part of the interface is designed to feel
+                        warm, simple and easy to use on both phones
+                        and desktops.
+                    </p>
+
+                </div>
+
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <strong>12+</strong>
+                        <span>Signature dishes</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>30 min</strong>
+                        <span>Average delivery target</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>7 days</strong>
+                        <span>Open every week</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>100%</strong>
+                        <span>Made with local flavour</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ORDER -->
+        <section id="order">
+
+            <div class="order">
+
+                <div>
+
+                    <h2>
+                        Ready for a proper meal?
+                    </h2>
+
+                    <p>
+                        Tell us what you're craving and we'll
+                        take it from there.
+                    </p>
+
+                </div>
+
+                <button
+                    class="hero-cta"
+                    onclick="showToast('Order request started — this is a portfolio demo.')">
+                    Start an order
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 NaijaBites · Portfolio concept by Gbolahan Caleb Olusoga
+    </footer>
+
+
+    <!-- TOAST MESSAGE -->
+    <div class="toast" id="toast"></div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
